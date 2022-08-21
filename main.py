@@ -7,6 +7,7 @@ api_logger = logging.getLogger("api_logger")
 
 app = Flask(__name__)
 
+logging.basicConfig(filename='basic.log', level=logging.INFO)
 
 @app.route('/')
 def main_page():
@@ -67,4 +68,5 @@ def api_posts_single(pk):
     api_logger.debug(f'Обращение к посту {pk}')
     return jsonify(post)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
