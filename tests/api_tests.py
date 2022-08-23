@@ -45,4 +45,3 @@ class TestApi:
 
         assert post['pk'] == pk, f'Неправильный pk при запросе поста {pk}'
 
-# response = main.app.test_client().get('/api/posts', follow_redirects=True)
